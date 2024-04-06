@@ -16,10 +16,28 @@ class Hippo extends Animal {
     }
 }
 
+// =============
+
+class Animal2 {
+    public Animal2() {
+        System.out.println("Animal2 Initing ....");
+    }
+}
+
+class Duck extends Animal2 {
+    int size;
+
+    public Duck(int size) {
+        super(); // If we don't provide the Compiler will add one (default) for us
+        this.size = size;
+        System.out.println("Duck Initing ....");
+    }
+}
+
 class Main {
     public static void main(String[] args) {
         // How the Concret class and their SuperClasses are creating
-        Hippo hippo = new Hippo();
+//        Hippo hippo = new Hippo();
         // Stack
         // Object() => Animal() => Hippo()
         /*
@@ -27,5 +45,9 @@ class Main {
             Animal Initing ...
             Hippo Initing ....
          */
+
+        // ==========
+
+        Duck duck = new Duck(23);
     }
 }
